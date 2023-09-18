@@ -1,202 +1,60 @@
-<h1 align="center">
-    <b>Create React App Template for SOHO</b>
-</h1>
-<h2 align="center">- Legacy -</h2>
+# Getting Started with Create React App
 
-<p align="center">React template in javascript/Typesciprt base using Create-Reract-APP</p>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<!-- <div align="center">{badge location}</div> -->
+## Available Scripts
 
-This is a template using the most commonly used create-react-app.
-Since CRA is no longer supported, a separate version changed to vite or bun is being prepared.
+In the project directory, you can run:
 
-### Features
+### `npm start`
 
-1. Freedom of choice of language
-   - ECMAScript (javascript)
-   - [ECMAScript with JsDoc typecheck](https://www.typescriptlang.org/docs/handbook/intro-to-js-ts.html)
-   - Typescript
-2. Collaboration between library and vscode extension
-3. Well-defined folder structure
-4. Document Automation
-5. [Light, Dark] theme changer
-6. Multilingual support
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Browser Support
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-| ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Latest ✔                                                                                         | Latest ✔                                                                                            | Latest ✔                                                                                         | Latest ✔                                                                                      | Latest ✔                                                                                   |
+### `npm test`
 
-## Installation
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```bash
-$ npx create-react-app --template comnunity
-```
+### `npm run build`
 
-### Main Library
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Language
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-<img height="32" width="32" src="https://cdn.simpleicons.org/javascript" alt="javascript" /> <img height="32" width="32" src="https://cdn.simpleicons.org/typescript" alt="typesciprt"/>
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Created by
+## Learn More
 
-<img height="32" width="32" src="https://cdn.simpleicons.org/createreactapp" alt="create-react-app" />
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Library
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-<img height="32" width="32" src="https://cdn.simpleicons.org/react" alt="react"/> <img height="32" width="32" src="https://cdn.simpleicons.org/reactrouter" alt="react-router"/> <img height="32" width="32" src="https://cdn.simpleicons.org/antdesign" alt="ant design"/>
-<img height="32" width="32" src="https://cdn.simpleicons.org/redux" alt="redux"/> <img height="32" width="32" src="https://cdn.simpleicons.org/axios" alt="axios"/> <img height="32" width="32" src="https://cdn.simpleicons.org/sass" alt="sass"/> <img height="32" width="32" src="https://cdn.simpleicons.org/i18next" alt="i18next" />
+### Code Splitting
 
-### Dev tools
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-<img height="32" width="32" src="https://cdn.simpleicons.org/eslint" alt="eslint"/> <img height="32" width="32" src="https://cdn.simpleicons.org/prettier" alt="prettier"/> <img height="32" width="32" src="https://cdn.simpleicons.org/dotenv" alt=".env"/> <img height="32" width="32" src="https://cdn.simpleicons.org/editorconfig" alt="EditorConfig"/> <img height="32" width="32" src="https://cdn.simpleicons.org/containerd/000000/ffffff" alt="devcontainer"/> <img height="32" width="32" src="https://cdn.simpleicons.org/sonarlint" alt="Sonar Lint"/> <img height="32" width="32" src="https://cdn.simpleicons.org/jest" alt="jest"/><img height="32" width="32" src="https://cdn.simpleicons.org/storybook" alt="storybook"/> <img height="32" width="32" src="https://cdn.simpleicons.org/cypress/000000/ffffff" alt="Cypress"/>
+### Analyzing the Bundle Size
 
-### Src Folder structure
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-```ascii
-Project
-├── assets                                    // like svg
-├── components                                // atomic design
-│   ├── atoms
-│   ├── molecules
-│   ├── organisms
-│   └── templates
-├── config                                    // project configuration
-│   ├── i18n                                  // i18next resource
-│   │   ├── {lang}                            // ISO 639-1 Language Code [en,...,ko]
-│   │   │   └── translation.json
-│   ├── types                                 // extend interface
-│   │   ├── ExtendedMenuItems.d.ts
-│   │   └── ExtendedRouter.d.ts
-│   ├── ExtendedMenuItems.js
-│   ├── ExtendedRouter.js
-│   ├── MenuItems.js
-│   └── Router.js
-├── context                                   // React Context
-│   └── {context name}                        // Context domain name
-│       ├── components                        // Context related components
-│       └── hooks                             // Context related hooks
-├── features                                  // Redux
-│   └── {reducer name}
-├── hooks                                     // common hooks
-├── lib                                       // Library configuration
-│   ├── components
-│   └── {library name}Config.js
-├── pages                                     // Pages
-│   ├── {domain}
-│   │   ├── {page}
-│   ├── {page}
-│   │   ├── components                        // children for page
-│   │   ├── {page}.jsx
-│   │   ├── {page}.module.scss                // module scss
-└── utils                                     // common utils
+### Making a Progressive Web App
 
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## Project configuration
+### Advanced Configuration
 
-### Type check enable or disable
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-1. Enable(true) / Disable(false)
+### Deployment
 
-   `tsconfig.json`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-   ```json
-   {
-     ...
-     "checkJs": true,
-     ...
-   }
-   ```
+### `npm run build` fails to minify
 
-2. Optionnal
-
-   If you want to apply or not apply type check to only some parts, check the guide below.
-
-   [JS Projects Utilizing TypeScript](https://www.typescriptlang.org/docs/handbook/intro-to-js-ts.html#ts-check)
-
-3. Using typescript
-
-### Router
-
-`src/config/Router.js`
-
-### MenuItems
-
-`src/config/Menu.js`
-
-### JsDoc generation
-
-```bash
-$ yarn doc
-```
-
-`doc` folder created
-
-### declaration export
-
-```bash
-$ yarn type
-```
-
-`type` folder created
-
-## Library configuration
-
-### Theme Config
-
-1.  Ant Design Default theme
-
-    The initial theme acts as the system's theme setting.
-
-2.  Ant Design Customize theme
-
-    To modify the Antd Theme, set the designToken according to the [Ant Design Customize Theme guide](https://ant.design/docs/react/customize-theme).
-
-    `src/lib/themeConfig.js`
-
-    ```js
-    const themeConfig = {
-      themeName: getSystemCurrentTheme,
-      designToken: {
-        components: {
-          Layout: {
-            headerHeight: 64,
-          },
-        },
-      },
-      componentSize: "middle",
-    };
-    ```
-
-## Troubleshooting
-
-1. error `TS2307``: Cannot find module 'moduleA'
-
-   `src/react-app-env.d.ts` Add the extension corresponding to the file.
-
-   ```typescript
-   declare module "*.png";
-   declare module "*.svg";
-   declare module "*.jpeg";
-   declare module "*.jpg";
-   declare module "*.scss";
-   declare module "*.sass";
-   ```
-
-## Known Issue
-
-- NPM high severity vulnerabilities : See [issue](https://github.com/comnori)
-  - nth-check
-  - pug
-  - taffydb
-    - better-doc : Solved when deploying better-docs that supports jsdoc 4.0
-- Warn display issue when npm install on x86_64 mac : See [issue](https://github.com/comnori)
-
-## Working
-
-- [ ] Jest
-- [ ] Storybook
-- [ ] Cypress
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

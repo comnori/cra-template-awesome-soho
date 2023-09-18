@@ -32,7 +32,7 @@ Since CRA is no longer supported, a separate version changed to vite or bun is b
 ## Installation
 
 ```bash
-$ npx create-react-app --template comnunity
+$ npx create-react-app my-app --template awesome-soho
 ```
 
 ### Main Library
