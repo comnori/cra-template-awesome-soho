@@ -27,8 +27,8 @@ yarn.lock
 package-lock.json
 
 # dev
-/types
-/docs
+/type
+/doc
 
 # etc
 i18n-ally-reviews.yml
