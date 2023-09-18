@@ -5,7 +5,11 @@
 
 <p align="center">React template in javascript/Typesciprt base using Create-Reract-APP</p>
 
-<!-- <div align="center">{badge location}</div> -->
+<p align="center">
+<img alt="npm" src="https://img.shields.io/npm/v/cra-template-awesome-soho?style=for-the-badge&logo=npm">
+<img alt="npm" src="https://img.shields.io/npm/dt/cra-template-awesome-soho?style=for-the-badge&logo=npm">
+<img alt="NPM" src="https://img.shields.io/npm/l/cra-template-awesome-soho?style=for-the-badge">
+</p>
 
 This is a template using the most commonly used create-react-app.
 Since CRA is no longer supported, a separate version changed to vite or bun is being prepared.
@@ -52,7 +56,7 @@ $ npx create-react-app my-app --template awesome-soho
 
 ### Dev tools
 
-<img height="32" width="32" src="https://cdn.simpleicons.org/eslint" alt="eslint"/> <img height="32" width="32" src="https://cdn.simpleicons.org/prettier" alt="prettier"/> <img height="32" width="32" src="https://cdn.simpleicons.org/dotenv" alt=".env"/> <img height="32" width="32" src="https://cdn.simpleicons.org/editorconfig" alt="EditorConfig"/> <img height="32" width="32" src="https://cdn.simpleicons.org/containerd/000000/ffffff" alt="devcontainer"/> <img height="32" width="32" src="https://cdn.simpleicons.org/sonarlint" alt="Sonar Lint"/> <img height="32" width="32" src="https://cdn.simpleicons.org/jest" alt="jest"/><img height="32" width="32" src="https://cdn.simpleicons.org/storybook" alt="storybook"/> <img height="32" width="32" src="https://cdn.simpleicons.org/cypress/000000/ffffff" alt="Cypress"/>
+<img height="32" width="32" src="https://cdn.simpleicons.org/eslint" alt="eslint"/> <img height="32" width="32" src="https://cdn.simpleicons.org/prettier" alt="prettier"/> <img height="32" width="32" src="https://cdn.simpleicons.org/dotenv" alt=".env"/> <img height="32" width="32" src="https://cdn.simpleicons.org/editorconfig/aaaaaa" alt="EditorConfig"/> <img height="32" width="32" src="https://cdn.simpleicons.org/containerd/aaaaaa" alt="devcontainer"/> <img height="32" width="32" src="https://cdn.simpleicons.org/sonarlint" alt="Sonar Lint"/> <img height="32" width="32" src="https://cdn.simpleicons.org/jest" alt="jest"/><img height="32" width="32" src="https://cdn.simpleicons.org/storybook" alt="storybook"/> <img height="32" width="32" src="https://cdn.simpleicons.org/cypress/000000/ffffff" alt="Cypress"/>
 
 ### Src Folder structure
 
