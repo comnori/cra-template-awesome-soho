@@ -1,0 +1,32 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "mikestead.dotenv",
+    "usernamehw.errorlens",
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "chrisbibby.hide-node-modules",
+    "oderwat.indent-rainbow",
+    "liamhammett.inline-parameters",
+    "PKief.material-icon-theme",
+    "christian-kohler.npm-intellisense",
+    "42Crunch.vscode-openapi",
+    "esbenp.prettier-vscode",
+    "SonarSource.sonarlint-vscode",
+    "meganrogge.template-string-converter",
+    "rangav.vscode-thunder-client",
+    "redhat.vscode-yaml",
+    "Huuums.vscode-fast-folder-structure",
+    "zhuangtongfa.material-theme",
+    "EditorConfig.EditorConfig",
+    "lokalise.i18n-ally",
+    "ms-vscode.live-server",
+    "ms-playwright.playwright",
+    "fabiospampinato.vscode-todo-plus",
+    "eamodio.gitlens",
+    "dotenv.dotenv-vscode",
+    "fengzhu.css-module-intellisense"
+  ]
+}

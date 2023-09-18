@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["dom", "dom.iterable"],
+    "jsx": "react-jsx",
+    "module": "CommonJS",
+    "baseUrl": "./src",
+    "paths": {
+      "@antd/*": ["../node_modules/antd/es/*"]
+    },
+    "types": ["node", "react", "react-dom"],
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "sourceMap": true,
+    "outDir": "./type",
+    "removeComments": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noErrorTruncation": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/*test*"]
+}

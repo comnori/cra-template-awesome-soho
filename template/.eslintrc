@@ -1,0 +1,29 @@
+{
+  "extends": ["airbnb", "airbnb/hooks", "prettier", "react-app", "react-app/jest"],
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": "off",
+    "jsx-a11y/anchor-is-valid": "off"
+  },
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "rules": {
+        "no-use-before-define": "off"
+      }
+    }
+  ]
+}
