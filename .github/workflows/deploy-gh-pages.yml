@@ -4,6 +4,9 @@
 name: Deply gh-pages
 
 on:
+  push:
+    branches:
+      - CICD
   workflow_dispatch:
 env:
   build-folder: "./build"
