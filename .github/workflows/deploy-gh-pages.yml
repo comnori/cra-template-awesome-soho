@@ -8,6 +8,8 @@ on:
 jobs:
   Deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/setup-node@v3
         with:
@@ -16,13 +18,11 @@ jobs:
       - name: Enable Yarn
         run: corepack enable
       - name: Create template
-        run: yarn create react-app . --template awesome-soho
+        run: yarn create react-app . --template awesome-soho --skip-git
       - name: Confirm build files
         run: ls -al
       - name: Build app
         run: yarn build
-      - name: Confirm build files
-        run: ls -al ./build
       - name: Confirm build files
         run: ls -al ./build
       - name: Deploy to GitHub Pages 🚀
