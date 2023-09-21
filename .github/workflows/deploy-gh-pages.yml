@@ -18,15 +18,15 @@ jobs:
       - name: Create template
         run: yarn create react-app . --template awesome-soho
   build:
-    needs : settings
+    needs: settings
     runs-on: ubuntu-latest
     steps:
-      - name : Confirm directory
-        run: pwd
-      - name : Confirm build files
-        run: ls -al ./build
+      - name: Confirm build files
+        run: ls -al
       - name: Build app
         run: yarn build
+      - name: Confirm build files
+        run: ls -al ./build
   deploy:
     needs: build
     permissions:
@@ -41,6 +41,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          
-        
-          
