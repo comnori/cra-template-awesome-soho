@@ -15,28 +15,32 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: Enable Yarn
         run: corepack enable
+      - name: Create template
+        run: yarn create react-app . --template awesome-soho
   build:
     needs : settings
     runs-on: ubuntu-latest
     steps:
-      - name: Create template
-        run: yarn create react-app my-app --template awesome-soho
       - name: Build app
-        working-directory: ./my-app
         run: yarn build
+      - name : Confirm directory
+        run: pwd
+      - name : Confirm build files
+        run: ls -al ./build
   deploy:
     needs: build
     permissions:
-      pages: write
-      id-token: write
+      contents: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: deploy to gh-pages
+      - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./my-app/build
+          publish_dir: ./build
+          
+        
           
