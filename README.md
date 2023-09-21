@@ -1,20 +1,32 @@
 <h1 align="center">
     <b>Create React App Template for SOHO</b>
 </h1>
-<h2 align="center">- Legacy -</h2>
-
+<h2 align="center">Legacy Template</h2>
 <p align="center">React template in javascript/Typesciprt base using Create-Reract-APP</p>
-
 <p align="center">
-<img alt="npm" src="https://img.shields.io/npm/v/cra-template-awesome-soho?style=for-the-badge&logo=npm">
-<img alt="npm" src="https://img.shields.io/npm/dt/cra-template-awesome-soho?style=for-the-badge&logo=npm">
-<img alt="NPM" src="https://img.shields.io/npm/l/cra-template-awesome-soho?style=for-the-badge">
+  <a href="https://www.npmjs.com/package/cra-template-awesome-soho" target="_blank">
+    <img alt="npm" src="https://img.shields.io/npm/v/cra-template-awesome-soho?style=for-the-badge&logo=npm">
+    <img alt="npm" src="https://img.shields.io/npm/dt/cra-template-awesome-soho?style=for-the-badge&logo=npm">
+    <img alt="NPM" src="https://img.shields.io/npm/l/cra-template-awesome-soho?style=for-the-badge">
+  </a>
 </p>
 
 This is a template using the most commonly used create-react-app.
 Since CRA is no longer supported, a separate version changed to vite or bun is being prepared.
 
-### Features
+## Browser Support
+
+| ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) |
+| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Latest ✔                                                                                          | Latest ✔                                                                                             | Latest ✔                                                                                          | Latest ✔                                                                                       | Latest ✔                                                                                    |
+
+## Installation
+
+```bash
+$ npx create-react-app my-app --template awesome-soho
+```
+
+## Features
 
 1. Freedom of choice of language
    - ECMAScript (javascript)
@@ -27,19 +39,7 @@ Since CRA is no longer supported, a separate version changed to vite or bun is b
 6. Multilingual support
 7. IDE environment integration
 
-### Browser Support
-
-| ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) |
-| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Latest ✔                                                                                          | Latest ✔                                                                                             | Latest ✔                                                                                          | Latest ✔                                                                                       | Latest ✔                                                                                    |
-
-## Installation
-
-```bash
-$ npx create-react-app my-app --template awesome-soho
-```
-
-### Main Library
+## Libraries
 
 ### Language
 
@@ -54,14 +54,17 @@ $ npx create-react-app my-app --template awesome-soho
 <img height="32" width="32" src="https://cdn.simpleicons.org/react" alt="react"/> <img height="32" width="32" src="https://cdn.simpleicons.org/reactrouter" alt="react-router"/> <img height="32" width="32" src="https://cdn.simpleicons.org/antdesign" alt="ant design"/>
 <img height="32" width="32" src="https://cdn.simpleicons.org/redux" alt="redux"/> <img height="32" width="32" src="https://cdn.simpleicons.org/axios" alt="axios"/> <img height="32" width="32" src="https://cdn.simpleicons.org/sass" alt="sass"/> <img height="32" width="32" src="https://cdn.simpleicons.org/i18next" alt="i18next" />
 
+- pino
+- dayJs
+
 ### Dev tools
 
 <img height="32" width="32" src="https://cdn.simpleicons.org/eslint" alt="eslint"/> <img height="32" width="32" src="https://cdn.simpleicons.org/prettier" alt="prettier"/> <img height="32" width="32" src="https://cdn.simpleicons.org/dotenv" alt=".env"/> <img height="32" width="32" src="https://cdn.simpleicons.org/editorconfig/aaaaaa" alt="EditorConfig"/> <img height="32" width="32" src="https://cdn.simpleicons.org/containerd/aaaaaa" alt="devcontainer"/> <img height="32" width="32" src="https://cdn.simpleicons.org/sonarlint" alt="Sonar Lint"/> <img height="32" width="32" src="https://cdn.simpleicons.org/jest" alt="jest"/><img height="32" width="32" src="https://cdn.simpleicons.org/storybook" alt="storybook"/> <img height="32" width="32" src="https://cdn.simpleicons.org/cypress/000000/ffffff" alt="Cypress"/>
 
-### Src Folder structure
+## Source Folder structure
 
 ```ascii
-Project
+src
 ├── assets                                    // like svg
 ├── components                                // atomic design
 │   ├── atoms
