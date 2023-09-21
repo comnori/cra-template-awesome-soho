@@ -15,7 +15,7 @@ import "./App.css";
 import { Loading } from "./pages";
 
 // TODO : Redux store로 이동
-const extendedRouter = createBrowserRouter(Router);
+const extendedRouter = createBrowserRouter(Router, { basename: process.env.PUBLIC_URL });
 
 const algorithmList = {
   light: antdTheme.defaultAlgorithm,
@@ -29,7 +29,7 @@ const languageList = {
 
 function Main() {
   const { designToken, themeName, componentSize } = useSelector(
-    /** @param {import("lib/storeConfig").ReduxStore} state */ (state) => state.antdConfig,
+    /** @param {import("lib/storeConfig").ReduxStore} state */ (state) => state.antdConfig
   );
 
   const {

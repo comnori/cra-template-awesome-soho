@@ -1,7 +1,8 @@
 {
   "name": "cra-template-awesome-soho",
   "description": "React template in javascript/Typesciprt base using Create-React-App",
-  "version": "1.0.2",
+  "homepage": "https://comnori.github.io/cra-template-awesome-soho",
+  "version": "1.0.3",
   "keywords": [
     "react",
     "create-react-app",
