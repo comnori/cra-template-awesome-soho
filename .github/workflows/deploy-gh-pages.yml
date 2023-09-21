@@ -4,29 +4,41 @@
 name: Deply gh-pages
 
 on:
+  push:
+    branches:
+      - CICD
   workflow_dispatch:
+env:
+  build-folder: "./build"
+  node-version: 18
 jobs:
   Deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/setup-node@v3
+      - name: Set up NodeJS ${{env.node-version}}
+        uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: ${{env.node-version}}
           registry-url: https://registry.npmjs.org/
       - name: Enable Yarn
         run: corepack enable
       - name: Create template
-        run: yarn create react-app . --template awesome-soho --skip-git
+        run: yarn create react-app . --template awesome-soho
       - name: Confirm build files
         run: ls -al
+      - name: Add homepage info
+        run: npm pkg set 'homepage'='${{vars.HOMEPAGE_URL}}'
       - name: Build app
         run: yarn build
       - name: Confirm build files
-        run: ls -al ./build
+        run: ls -al ${{env.build-folder}}
       - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ${{env.build-folder}}
+          force_orphan: true
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
