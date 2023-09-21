@@ -6,8 +6,10 @@ name: Deply gh-pages
 on:
   workflow_dispatch:
 jobs:
-  settings:
+  Deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/setup-node@v3
         with:
@@ -16,31 +18,15 @@ jobs:
       - name: Enable Yarn
         run: corepack enable
       - name: Create template
-        run: yarn create react-app . --template awesome-soho
-  build:
-    needs : settings
-    runs-on: ubuntu-latest
-    steps:
-      - name : Confirm directory
-        run: pwd
-      - name : Confirm build files
-        run: ls -al ./build
+        run: yarn create react-app . --template awesome-soho --skip-git
+      - name: Confirm build files
+        run: ls -al
       - name: Build app
         run: yarn build
-  deploy:
-    needs: build
-    permissions:
-      contents: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
+      - name: Confirm build files
+        run: ls -al ./build
       - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          
-        
-          
