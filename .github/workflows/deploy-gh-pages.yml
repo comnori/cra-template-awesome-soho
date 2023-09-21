@@ -21,12 +21,12 @@ jobs:
     needs : settings
     runs-on: ubuntu-latest
     steps:
-      - name: Build app
-        run: yarn build
       - name : Confirm directory
         run: pwd
       - name : Confirm build files
         run: ls -al ./build
+      - name: Build app
+        run: yarn build
   deploy:
     needs: build
     permissions:
