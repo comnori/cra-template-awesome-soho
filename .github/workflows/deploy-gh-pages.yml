@@ -17,25 +17,40 @@ jobs:
         run: corepack enable
       - name: Create template
         run: yarn create react-app . --template awesome-soho
+      - uses: actions/upload-artifact@v3
+        with:
+          name: template-init
+          path: ./*
+          if-no-files-found: error
   build:
     needs: settings
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: template-init
       - name: Confirm build files
         run: ls -al
       - name: Build app
         run: yarn build
       - name: Confirm build files
         run: ls -al ./build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: ./build
+          if-no-files-found: error
   deploy:
     needs: build
     permissions:
       contents: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+      - name: Confirm build files
+        run: ls -al ./build
       - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
