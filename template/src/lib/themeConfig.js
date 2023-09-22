@@ -3,8 +3,8 @@
  *
  * @typedef {Object} antdConfigState
  * @prop {import("antd").ThemeConfig} [designToken]
- * @prop {import("@antd/locale").Locale} [locale]
- * @prop {import("@antd/config-provider/SizeContext").SizeType} [componentSize]
+ * @prop {import("antd/es/locale").Locale} [locale]
+ * @prop {import("antd/es/config-provider/SizeContext").SizeType} [componentSize]
  * @prop {themeTypeName} themeName
  */
 

@@ -5,7 +5,7 @@
  */
 
 /**
- * @typedef {import("@antd/menu/hooks/useItems").ItemType} ItemType - antd menu ItemType
+ * @typedef {import("antd/es/menu/hooks/useItems").ItemType} ItemType - antd menu ItemType
  */
 
 import { HomeOutlined } from "@ant-design/icons";

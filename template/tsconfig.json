@@ -5,9 +5,6 @@
     "jsx": "react-jsx",
     "module": "CommonJS",
     "baseUrl": "./src",
-    "paths": {
-      "@antd/*": ["../node_modules/antd/es/*"]
-    },
     "types": ["node", "react", "react-dom"],
     "resolveJsonModule": true,
     "allowJs": true,
