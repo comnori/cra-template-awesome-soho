@@ -11,7 +11,7 @@
     "checkJs": true,
     "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,
     "sourceMap": true,
     "outDir": "./type",
     "removeComments": true,

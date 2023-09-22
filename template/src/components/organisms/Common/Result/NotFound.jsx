@@ -19,7 +19,7 @@ function NotFound() {
         <Button
           type="primary"
           onClick={() => handleBackHomeClick()}>
-          {t("text.go-back")}{" "}
+          {t("text.go-back")}
         </Button>
       }
     />

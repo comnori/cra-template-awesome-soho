@@ -4,7 +4,7 @@
 <h2 align="center">Legacy Template</h2>
 <p align="center">React template in javascript/Typesciprt base using Create-Reract-APP</p>
 <p align="center">
-  <a href="https://www.npmjs.com/package/cra-template-awesome-soho" target="_blank">
+  <a href="https://www.npmjs.com/package/cra-template-awesome-soho" target="_blank" rel="noopener noreferrer">
     <img alt="npm" src="https://img.shields.io/npm/v/cra-template-awesome-soho?style=for-the-badge&logo=npm">
     <img alt="npm" src="https://img.shields.io/npm/dt/cra-template-awesome-soho?style=for-the-badge&logo=npm">
     <img alt="NPM" src="https://img.shields.io/npm/l/cra-template-awesome-soho?style=for-the-badge">

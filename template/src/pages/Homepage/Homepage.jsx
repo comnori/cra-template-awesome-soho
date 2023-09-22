@@ -37,7 +37,7 @@ function Homepage() {
           <a
             href="https://www.npmjs.com/package/cra-template-awesome-soho"
             target="_blank"
-            rel="noreferrer">
+            rel="noopener noreferrer">
             <Space>
               <Image
                 src="https://img.shields.io/npm/v/cra-template-awesome-soho?style=for-the-badge&logo=npm"
