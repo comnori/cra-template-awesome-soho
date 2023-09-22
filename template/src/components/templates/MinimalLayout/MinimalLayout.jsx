@@ -99,6 +99,7 @@ function MinimalLayout() {
               Copyright
               <a
                 href="https://www.linkedin.com/in/yongsik-yun-36260344/"
+                target="_blank"
                 rel="noopener noreferrer">
                 @comnori
               </a>
