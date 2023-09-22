@@ -1,4 +1,4 @@
-import { Col, Image, Row, Typography } from "antd";
+import { Col, Image, Row, Space, Typography } from "antd";
 import logo from "logo.svg";
 import { useTranslation } from "react-i18next";
 import styles from "./Homepage.module.scss";
@@ -30,6 +30,32 @@ function Homepage() {
             <Title>{t("text.package.title")}</Title>
             <Paragraph>{t("text.package.description")}</Paragraph>
           </Typography>
+        </Col>
+      </Row>
+      <Row justify="center">
+        <Col>
+          <a
+            href="https://www.npmjs.com/package/cra-template-awesome-soho"
+            target="_blank"
+            rel="noreferrer">
+            <Space>
+              <Image
+                src="https://img.shields.io/npm/v/cra-template-awesome-soho?style=for-the-badge&logo=npm"
+                preview={false}
+                alt="NPM Package Version"
+              />
+              <Image
+                src="https://img.shields.io/npm/dt/cra-template-awesome-soho?style=for-the-badge&logo=npm"
+                preview={false}
+                alt="NPM Package Total Counts"
+              />
+              <Image
+                src="https://img.shields.io/npm/l/cra-template-awesome-soho?style=for-the-badge"
+                preview={false}
+                alt="License"
+              />
+            </Space>
+          </a>
         </Col>
       </Row>
       <Row

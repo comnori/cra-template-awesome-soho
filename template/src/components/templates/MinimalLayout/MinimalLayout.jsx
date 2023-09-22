@@ -96,7 +96,13 @@ function MinimalLayout() {
           align="middle">
           <Col>
             <Text>
-              Copyright <a href="https://www.linkedin.com/in/yongsik-yun-36260344/">@comnori</a> All Rights Reserved.
+              Copyright{" "}
+              <a
+                href="https://www.linkedin.com/in/yongsik-yun-36260344/"
+                target="_blank">
+                @comnori
+              </a>{" "}
+              All Rights Reserved.
             </Text>
           </Col>
         </Row>
