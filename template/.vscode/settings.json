@@ -8,7 +8,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.foldingImportsByDefault": true,
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "notebook.output.wordWrap": false,
   "todo.embedded.exclude": [
     "**/*.html",
     "**/.*",

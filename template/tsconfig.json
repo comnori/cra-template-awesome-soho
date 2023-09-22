@@ -3,7 +3,7 @@
     "target": "ES6",
     "lib": ["dom", "dom.iterable"],
     "jsx": "react-jsx",
-    "module": "CommonJS",
+    "module": "esnext",
     "baseUrl": "./src",
     "types": ["node", "react", "react-dom"],
     "resolveJsonModule": true,
@@ -20,7 +20,10 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noErrorTruncation": false
+    "noErrorTruncation": false,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"],
   "exclude": ["**/*test*"]

@@ -1,10 +1,6 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
   "name": "cra-template-awesome-soho",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
-  // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "username": "comnori",
@@ -14,7 +10,6 @@
     "ghcr.io/devcontainers/features/node:1": { "version": "18" },
     "ghcr.io/devcontainers/features/java:1": { "version": "17" }
   },
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {
@@ -24,12 +19,10 @@
       "label": "SonarLint"
     }
   },
-  // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": {
     "Change User shell": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh",
     "Yarn enable": "corepack enable"
   },
-  // Configure tool-specific properties.
   "customizations": {
     "vscode": {
       "extensions": [
@@ -74,7 +67,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.foldingImportsByDefault": true,
         "typescript.tsdk": "node_modules\\typescript\\lib",
-        "notebook.output.wordWrap": false,
         "todo.embedded.exclude": [
           "**/*.html",
           "**/.*",
@@ -117,7 +109,6 @@
       }
     }
   },
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   "remoteUser": "comnori",
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}",
