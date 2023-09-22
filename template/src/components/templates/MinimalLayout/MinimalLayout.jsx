@@ -3,7 +3,8 @@ import { Avatar, Badge, Col, FloatButton, Layout, Menu, Popover, Row, Space, Typ
 import LanguageSwitch from "components/molecules/LanguageSwitch";
 import MenuItems from "config/MenuItems";
 import ThemeChangeSwitch from "features/antd/ThemeChangeSwitch";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Outlet, useMatches, useNavigate } from "react-router-dom";
 
 const { Content, Header, Footer } = Layout;
 const { Text, Link } = Typography;
@@ -14,6 +15,8 @@ const { useToken } = theme;
  *
  */
 function MinimalLayout() {
+  const [menuSelectedKeys, setMenuSelectedKeys] = useState(["Home"]);
+
   const {
     token: {
       // @ts-ignore
@@ -21,7 +24,15 @@ function MinimalLayout() {
       colorBgContainer,
     },
   } = useToken();
+
   const navigate = useNavigate();
+  const matches = useMatches();
+
+  useEffect(() => {
+    const selectedKeys = matches.filter(({ id }) => !id.toLowerCase().includes("root")).map(({ id }) => id);
+
+    setMenuSelectedKeys(selectedKeys);
+  }, [matches]);
 
   /**
    * @param {string} path
@@ -37,6 +48,7 @@ function MinimalLayout() {
           <Col flex="auto">
             <Menu
               items={MenuItems.NORMAL}
+              selectedKeys={menuSelectedKeys}
               mode="horizontal"
               overflowedIndicator={<MenuOutlined />}
             />
