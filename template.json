@@ -58,8 +58,11 @@
     },
     "scripts": {
       "type": "npx tsc",
-      "serve": "npm run build && serve -s build",
-      "doc": "npx jsdoc -c jsdoc.json"
+      "preserve": "yarn build",
+      "serve": "serve -s build",
+      "doc": "npx jsdoc -c jsdoc.json",
+      "init": "code --uninstall-extension vscjava.vscode-java-pack",
+      "postinit": "npm pkg delete scripts.init scripts.postinit"
     },
     "directories": {
       "doc": "JsDoc",

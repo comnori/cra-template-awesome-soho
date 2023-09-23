@@ -21,7 +21,9 @@
   },
   "postCreateCommand": {
     "Change User shell": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh",
-    "Yarn enable": "corepack enable"
+    "Yarn enable": "corepack enable",
+    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions",
+    "Installation global package": "arn global add serve"
   },
   "customizations": {
     "vscode": {
@@ -54,8 +56,6 @@
         "eamodio.gitlens",
         "dotenv.dotenv-vscode",
         "fengzhu.css-module-intellisense"
-        // 현재 feature에서 설치한 extension을 제거하는 기능이 없기 때문에 개별적으로 사용안함으로(작업영역) 사용 More info : https://github.com/devcontainers/features/issues/386
-        //["vscjava.vscode-java-pack"]
       ],
       "settings": {
         "editor.codeActionsOnSave": {
@@ -105,7 +105,8 @@
           "**/Thumbs.db": true,
           "**/node_modules": true
         },
-        "i18n-ally.sourceLanguage": "en"
+        "i18n-ally.sourceLanguage": "en",
+        "terminal.integrated.defaultProfile.linux": "zsh"
       }
     }
   },
