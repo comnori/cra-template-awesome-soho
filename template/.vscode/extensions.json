@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "formulahendry.auto-rename-tag",
     "aaron-bond.better-comments",
     "mikestead.dotenv",
     "usernamehw.errorlens",
@@ -9,7 +8,6 @@
     "mhutchie.git-graph",
     "chrisbibby.hide-node-modules",
     "oderwat.indent-rainbow",
-    "liamhammett.inline-parameters",
     "PKief.material-icon-theme",
     "christian-kohler.npm-intellisense",
     "42Crunch.vscode-openapi",
