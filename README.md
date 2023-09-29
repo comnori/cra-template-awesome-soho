@@ -11,8 +11,9 @@
   </a>
 </p>
 
-This is a template using the most commonly used create-react-app.
-Since CRA is no longer supported, a separate version changed to vite or bun is being prepared.
+This template only considers Client Side Rendering (CSR) and is a form of the most basic React technology considered by the creator rather than the latest trends.
+
+Since Create React App (CRA) is no longer supported, modern React templates composed of Vite, Typescript, etc. are being worked on.
 
 ## Browser Support
 
@@ -22,9 +23,21 @@ Since CRA is no longer supported, a separate version changed to vite or bun is b
 
 ## Installation
 
+### Install CRA template
+
 ```bash
 $ npx create-react-app my-app --template awesome-soho
 ```
+
+### Project initialization
+
+After the devcontainer runs normally, perform init.
+
+```bash
+$ npm run init
+```
+
+This script is used to remove unnecessary extensions from the devcontainer and is removed from scripts after execution.
 
 ## Features
 
@@ -199,6 +212,8 @@ $ yarn type
 - Warn display issue when npm install on x86_64 mac : See [issue](https://github.com/comnori)
 
 ## Working
+
+Scheduled to be available in 1.1.0
 
 - [ ] Jest
 - [ ] Storybook

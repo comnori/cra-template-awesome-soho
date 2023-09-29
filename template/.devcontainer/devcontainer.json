@@ -1,7 +1,34 @@
 {
+  "name": "cra-template-awesome-soho",
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "comnori",
+      "userUid": "1001",
+      "userGid": "1001"
+    },
+    "ghcr.io/devcontainers/features/node:1": { "version": "18" },
+    "ghcr.io/devcontainers/features/java:1": { "version": "17" }
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Application port"
+    },
+    "64120": {
+      "label": "SonarLint"
+    }
+  },
+  "postCreateCommand": {
+    "Change User shell": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh",
+    "Yarn enable": "corepack enable",
+    "Oh My Zsh Installer for Docker": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/zsh-in-docker.sh -t jonathan -p git -p ssh-agent -p https://github.com/zsh-users/zsh-autosuggestions -p https://github.com/zsh-users/zsh-completions",
+    "Installation global package": "yarn global add serve"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
+        "formulahendry.auto-rename-tag",
         "aaron-bond.better-comments",
         "mikestead.dotenv",
         "usernamehw.errorlens",
@@ -10,6 +37,7 @@
         "mhutchie.git-graph",
         "chrisbibby.hide-node-modules",
         "oderwat.indent-rainbow",
+        "liamhammett.inline-parameters",
         "PKief.material-icon-theme",
         "christian-kohler.npm-intellisense",
         "42Crunch.vscode-openapi",
@@ -28,45 +56,17 @@
         "eamodio.gitlens",
         "dotenv.dotenv-vscode",
         "fengzhu.css-module-intellisense"
-        // 현재 feature에서 설치한 extension을 제거하는 기능이 없기 때문에 개별적으로 사용안함으로(작업영역) 사용 More info : https://github.com/devcontainers/features/issues/386
-        //["vscjava.vscode-java-pack"]
       ],
       "settings": {
-        "diffEditor.experimental.showMoves": true,
-        "diffEditor.experimental.useVersion2": true,
-        "diffEditor.hideUnchangedRegions.enabled": true,
         "editor.codeActionsOnSave": {
-          "source.fixAll": true,
-          "source.organizeImports": true
+          "source.organizeImports": true,
+          "source.fixAll": true
         },
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.foldingImportsByDefault": true,
-        "editor.formatOnPaste": true,
-        "editor.formatOnSave": true,
-        "editor.inlayHints.enabled": "on",
-        "editor.linkedEditing": true,
-        "editor.pasteAs.enabled": true,
-        "editor.pasteAs.showPasteSelector": "afterPaste",
-        "editor.stickyScroll.defaultModel": "foldingProviderModel",
-        "editor.stickyScroll.enabled": true,
-        "editor.stickyScroll.scrollWithEditor": true,
-        "files.exclude": {
-          "**/.DS_Store": true,
-          "**/.git": true,
-          "**/.hg": true,
-          "**/.svn": true,
-          "**/CVS": true,
-          "**/node_modules": true,
-          "**/Thumbs.db": true
-        },
-        "i18n-ally.displayLanguage": "ko",
-        "i18n-ally.editor.preferEditor": true,
-        "i18n-ally.enabledFrameworks": ["react-i18next"],
-        "i18n-ally.keystyle": "nested",
-        "i18n-ally.localesPaths": ["./src/config/i18n"],
-        "i18n-ally.sourceLanguage": "en",
-        "javascript.inlayHints.parameterNames.enabled": "all",
-        "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+        "typescript.tsdk": "node_modules\\typescript\\lib",
         "todo.embedded.exclude": [
           "**/*.html",
           "**/.*",
@@ -91,46 +91,32 @@
           "**/*.map",
           "**/*.{3ds,3g2,3gp,7z,a,aac,adp,ai,aif,aiff,alz,ape,apk,ar,arj,asf,au,avi,bak,baml,bh,bin,bk,bmp,btif,bz2,bzip2,cab,caf,cgm,class,cmx,cpio,cr2,csv,cur,dat,dcm,deb,dex,djvu,dll,dmg,dng,doc,docm,docx,dot,dotm,dra,DS_Store,dsk,dts,dtshd,dvb,dwg,dxf,ecelp4800,ecelp7470,ecelp9600,egg,eol,eot,epub,exe,f4v,fbs,fh,fla,flac,fli,flv,fpx,fst,fvt,g3,gif,graffle,gz,gzip,h261,h263,h264,icns,ico,ief,img,ipa,iso,jar,jpeg,jpg,jpgv,jpm,jxr,key,ktx,lha,lib,lvp,lz,lzh,lzma,lzo,m3u,m4a,m4v,mar,mdi,mht,mid,midi,mj2,mka,mkv,mmr,mng,mobi,mov,movie,mp3,mp4,mp4a,mpeg,mpg,mpga,mxu,nef,npx,numbers,o,oga,ogg,ogv,otf,pages,pbm,pcx,pdb,pdf,pea,pgm,pic,png,pnm,pot,potm,potx,ppa,ppam,ppm,pps,ppsm,ppsx,ppt,pptm,pptx,psd,pya,pyc,pyo,pyv,qt,rar,ras,raw,resources,rgb,rip,rlc,rmf,rmvb,rtf,rz,s3m,s7z,scpt,sgi,shar,sil,sketch,slk,smv,so,sub,swf,tar,tbz,tbz2,tga,tgz,thmx,tif,tiff,tlz,ttc,ttf,txz,udf,uvh,uvi,uvm,uvp,uvs,uvu,viv,vob,war,wav,wax,wbmp,wdp,weba,webm,webp,whl,wim,wm,wma,wmv,wmx,woff,woff2,wvx,xbm,xif,xla,xlam,xls,xlsb,xlsm,xlsx,xlt,xltm,xltx,xm,xmind,xpi,xpm,xwd,xz,z,zip,zipx}"
         ],
-        "typescript.inlayHints.parameterNames.enabled": "all",
-        "typescript.tsdk": "node_modules\\typescript\\lib"
+        "i18n-ally.displayLanguage": "ko",
+        "i18n-ally.enabledFrameworks": ["react-i18next"],
+        "i18n-ally.localesPaths": ["./src/config/i18n"],
+        "i18n-ally.keystyle": "nested",
+        "i18n-ally.editor.preferEditor": true,
+        "files.exclude": {
+          "**/.git": true,
+          "**/.svn": true,
+          "**/.hg": true,
+          "**/CVS": true,
+          "**/.DS_Store": true,
+          "**/Thumbs.db": true,
+          "**/node_modules": true
+        },
+        "i18n-ally.sourceLanguage": "en",
+        "terminal.integrated.defaultProfile.linux": "zsh"
       }
     }
   },
-  "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {
-      "userGid": "1001",
-      "username": "comnori",
-      "userUid": "1001"
-    },
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "17"
-    },
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "18"
-    }
+  "remoteUser": "comnori",
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}",
+    "NODE_ENV": "development"
   },
-  "forwardPorts": [3000],
   "hostRequirements": {
     "cpus": 2,
     "memory": "8gb"
-  },
-  "image": "mcr.microsoft.com/devcontainers/base:jammy",
-  "name": "cra-template-awesome-soho",
-  "portsAttributes": {
-    "3000": {
-      "label": "Application port"
-    },
-    "64120": {
-      "label": "SonarLint"
-    }
-  },
-  "postCreateCommand": {
-    "Change User shell": "bash ${containerWorkspaceFolder}/.devcontainer/scripts/init.sh",
-    "Yarn enable": "corepack enable"
-  },
-  "remoteEnv": {
-    "NODE_ENV": "development",
-    "PATH": "${containerEnv:PATH}"
-  },
-  "remoteUser": "comnori"
+  }
 }
