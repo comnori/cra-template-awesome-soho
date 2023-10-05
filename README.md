@@ -15,6 +15,8 @@ This template only considers Client Side Rendering (CSR) and is a form of the mo
 
 Since Create React App (CRA) is no longer supported, modern React templates composed of Vite, Typescript, etc. are being worked on.
 
+[DEMO Page](https://comnori.github.io/cra-template-awesome-soho/)
+
 ## Browser Support
 
 | ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) |
