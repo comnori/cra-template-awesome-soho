@@ -28,7 +28,7 @@ Since Create React App (CRA) is no longer supported, modern React templates comp
 ### Install CRA template
 
 ```bash
-$ npx create-react-app my-app --template awesome-soho
+> npx create-react-app my-app --template awesome-soho
 ```
 
 ### Project initialization
@@ -36,7 +36,7 @@ $ npx create-react-app my-app --template awesome-soho
 After the devcontainer runs normally, perform init.
 
 ```bash
-$ npm run init
+> npm run init
 ```
 
 This script is used to remove unnecessary extensions from the devcontainer and is removed from scripts after execution.
@@ -148,7 +148,7 @@ src
 ### JsDoc generation
 
 ```bash
-$ yarn doc
+yarn doc
 ```
 
 `doc` folder created
@@ -156,7 +156,7 @@ $ yarn doc
 ### declaration export
 
 ```bash
-$ yarn type
+yarn type
 ```
 
 `type` folder created
@@ -165,11 +165,11 @@ $ yarn type
 
 ### Theme Config
 
-1.  Ant Design Default theme
+1. Ant Design Default theme
 
     The initial theme acts as the system's theme setting.
 
-2.  Ant Design Customize theme
+2. Ant Design Customize theme
 
     To modify the Antd Theme, set the designToken according to the [Ant Design Customize Theme guide](https://ant.design/docs/react/customize-theme).
 
