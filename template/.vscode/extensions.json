@@ -20,6 +20,7 @@
     "fabiospampinato.vscode-todo-plus",
     "eamodio.gitlens",
     "dotenv.dotenv-vscode",
-    "fengzhu.css-module-intellisense"
+    "fengzhu.css-module-intellisense",
+    "Orta.vscode-jest"
   ]
 }
