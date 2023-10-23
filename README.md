@@ -17,6 +17,14 @@ Since Create React App (CRA) is no longer supported, modern React templates comp
 
 [DEMO Page](https://comnori.github.io/cra-template-awesome-soho/)
 
+## Recommendation
+
+1. This template is recommended to be used in [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) to ensure the same operation on Linux / Windows / Mac.
+
+   - On Windows, the script is not guaranteed to work if you are not using [WSL](https://learn.microsoft.com/en-US/windows/wsl/install).
+
+2. This template has vulnerabilities in create-react-app, so if possible, use [vite-template](https://github.com/comnori/vite-template-awesome-soho) instead.
+
 ## Browser Support
 
 | ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) |
