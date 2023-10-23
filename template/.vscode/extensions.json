@@ -21,6 +21,9 @@
     "eamodio.gitlens",
     "dotenv.dotenv-vscode",
     "fengzhu.css-module-intellisense",
-    "Orta.vscode-jest"
+    "Orta.vscode-jest",
+    "CS50.extension-uninstaller",
+    "formulahendry.auto-rename-tag",
+    "liamhammett.inline-parameters"
   ]
 }

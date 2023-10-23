@@ -1,2 +1,1 @@
-$(which npm) pkg delete scripts.eject
-$(which npm) pkg delete eslintConfig
+$(which npm) pkg delete scripts.eject eslintConfig
