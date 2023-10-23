@@ -103,7 +103,8 @@
           "**/node_modules": true
         },
         "i18n-ally.sourceLanguage": "en",
-        "terminal.integrated.defaultProfile.linux": "zsh"
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "extension-uninstaller.uninstall": ["vscjava.vscode-java-pack"]
       }
     }
   },
