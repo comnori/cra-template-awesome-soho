@@ -39,16 +39,6 @@ Since Create React App (CRA) is no longer supported, modern React templates comp
 > npx create-react-app my-app --template awesome-soho
 ```
 
-### Project initialization
-
-After the devcontainer runs normally, perform init.
-
-```bash
-> npm run init
-```
-
-This script is used to remove unnecessary extensions from the devcontainer and is removed from scripts after execution.
-
 ## Features
 
 1. Freedom of choice of language
