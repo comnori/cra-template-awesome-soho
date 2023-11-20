@@ -8,6 +8,7 @@
     <img alt="npm" src="https://img.shields.io/npm/v/cra-template-awesome-soho?style=for-the-badge&logo=npm">
     <img alt="npm" src="https://img.shields.io/npm/dt/cra-template-awesome-soho?style=for-the-badge&logo=npm">
     <img alt="NPM" src="https://img.shields.io/npm/l/cra-template-awesome-soho?style=for-the-badge">
+    <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fcomnori%2Fcra-template-awesome-soho"><img src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fcomnori%2Fcra-template-awesome-soho&countColor=%23263759" />
   </a>
 </p>
 
